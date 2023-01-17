@@ -1,1 +1,1 @@
-# xcom-frp-helper
+For a XCOM roleplay game pod tracker.
