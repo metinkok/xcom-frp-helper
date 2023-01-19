@@ -35,7 +35,7 @@ public class ControlWindow extends JFrame{
         thinmanPod = new JButton("Create thinman pod");
         etheralPod = new JButton("Create etheral pod");
         uber_etheral = new JButton("Create uber etheral pod");
-        mechtoid = new JButton("reate mechtoid pod");
+        mechtoid = new JButton("Create mechtoid pod");
         seeker = new JButton("Create seeker pod");
         chryssalid = new JButton("Create chryssalid pod");
         sectopod = new JButton("Create sectopod pod");
@@ -79,11 +79,27 @@ public class ControlWindow extends JFrame{
     }
     private class Handler implements ActionListener
     {
+        private final Muton mutonToken = new Muton();
+        private final Sectoid sectoidToken = new Sectoid();
+        private final Berserker berserkerToken = new Berserker();
+        private final SectoidCommander sectoidCommanderToken = new SectoidCommander();
+        private final Cyberdisc cyberdiskToken = new Cyberdisc();
+        private final Thinman thinmanToken = new Thinman();
+        private final Etheral etheralToken = new Etheral();
+        private final UberEtheral uberEtheralToken = new UberEtheral();
+        private final Mechtoid mechtoidToken = new Mechtoid();
+        private final Seeker seekerToken = new Seeker();
+        private final Chryssalid chryssalidToken = new Chryssalid();
+        private final Sectopod sectopodToken = new Sectopod();
+        private final MutonElite mutonEliteToken = new MutonElite();
+        private final Zombie zombieToken = new Zombie();
+        private final Drone droneToken = new Drone();
+
         private void createSectoids(){
             for(int i = 0; i<3; i++){
                 AlienWindow window = new AlienWindow(new Sectoid());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(sectoidToken.width,sectoidToken.height+75);
                 window.setVisible(true);
             }
             System.out.println("Created sectoid pod");
@@ -92,7 +108,7 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<3; i++){
                 AlienWindow window = new AlienWindow(new Muton());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(mutonToken.width,mutonToken.height+75);
                 window.setVisible(true);
             }
             System.out.println("Created muton pod");
@@ -101,12 +117,12 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<2; i++){
                 AlienWindow window = new AlienWindow(new Muton());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(mutonToken.width,mutonToken.height+75);
                 window.setVisible(true);
             }
             AlienWindow window = new AlienWindow(new Berserker());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setSize(375,500);
+            window.setSize(berserkerToken.width,berserkerToken.height+75);
             window.setVisible(true);
             System.out.println("Created berserker pod");
         }
@@ -114,12 +130,12 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<2; i++){
                 AlienWindow window = new AlienWindow(new Sectoid());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(sectoidToken.width,sectoidToken.height+75);
                 window.setVisible(true);
             }
             AlienWindow window = new AlienWindow(new SectoidCommander());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setSize(375,500);
+            window.setSize(sectoidCommanderToken.width,sectoidCommanderToken.height+75);
             window.setVisible(true);
             System.out.println("Created sectoid commander pod");
         }
@@ -127,12 +143,12 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<2; i++){
                 AlienWindow window = new AlienWindow(new Drone());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(droneToken.width,droneToken.height+75);
                 window.setVisible(true);
             }
             AlienWindow window = new AlienWindow(new Cyberdisc());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setSize(375,500);
+            window.setSize(cyberdiskToken.width,cyberdiskToken.height+75);
             window.setVisible(true);
             System.out.println("Created cyberdisc pod");
         }
@@ -140,7 +156,7 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<3; i++) {
                 AlienWindow window = new AlienWindow(new Thinman());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375, 500);
+                window.setSize(thinmanToken.width, thinmanToken.height+75);
                 window.setVisible(true);
                 System.out.println("Created thinman pod");
             }
@@ -149,12 +165,12 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<2; i++){
                 AlienWindow window = new AlienWindow(new SectoidCommander());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(sectoidCommanderToken.width,sectoidCommanderToken.height+75);
                 window.setVisible(true);
             }
             AlienWindow window = new AlienWindow(new Etheral());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setSize(375,500);
+            window.setSize(etheralToken.width,etheralToken.height+75);
             window.setVisible(true);
             System.out.println("Created etheral pod");
         }
@@ -162,12 +178,12 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<2; i++){
                 AlienWindow window = new AlienWindow(new Drone());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(droneToken.width,droneToken.height+75);
                 window.setVisible(true);
             }
             AlienWindow window = new AlienWindow(new Sectopod());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setSize(375,500);
+            window.setSize(sectopodToken.width,sectopodToken.height+75);
             window.setVisible(true);
             System.out.println("Created sectopod pod");
         }
@@ -175,12 +191,12 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<2; i++){
                 AlienWindow window = new AlienWindow(new Sectoid());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(sectoidToken.width,sectoidToken.height+75);
                 window.setVisible(true);
             }
             AlienWindow window = new AlienWindow(new Mechtoid());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setSize(375,500);
+            window.setSize(mechtoidToken.width,mechtoidToken.height+75);
             window.setVisible(true);
             System.out.println("Created mechtoid pod");
         }
@@ -188,7 +204,7 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<2; i++){
                 AlienWindow window = new AlienWindow(new Seeker());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(seekerToken.width,seekerToken.height+75);
                 window.setVisible(true);
             }
             System.out.println("Created seeker pod");
@@ -197,7 +213,7 @@ public class ControlWindow extends JFrame{
             for(int i = 0; i<3; i++){
                 AlienWindow window = new AlienWindow(new Chryssalid());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375,500);
+                window.setSize(chryssalidToken.width,chryssalidToken.height+75);
                 window.setVisible(true);
             }
             System.out.println("Created chryssalid pod");
@@ -206,7 +222,7 @@ public class ControlWindow extends JFrame{
             for (int i = 0; i < 3; i++) {
                 AlienWindow window = new AlienWindow(new MutonElite());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375, 500);
+                window.setSize(mutonEliteToken.width, mutonEliteToken.height+75);
                 window.setVisible(true);
             }
             System.out.println("Created muton elite pod");
@@ -215,12 +231,12 @@ public class ControlWindow extends JFrame{
             for (int i = 0; i < 2; i++) {
                 AlienWindow window = new AlienWindow(new Etheral());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(375, 500);
+                window.setSize(etheralToken.width,etheralToken.height+75);
                 window.setVisible(true);
             }
             AlienWindow window = new AlienWindow(new UberEtheral());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setSize(375, 500);
+            window.setSize(uberEtheralToken.width, uberEtheralToken.height+75);
             window.setVisible(true);
             System.out.println("Created final boss pod");
         }
@@ -254,7 +270,7 @@ public class ControlWindow extends JFrame{
             else if(event.getActionCommand().equals("Create sectoidCommander pod")) {
                 createSectoidCommander();
             }
-            else if(event.getActionCommand().equals("Create cyberdisk pod")) {
+            else if(event.getActionCommand().equals("Create cyberdisc pod")) {
                 createCyberdisk();
             }
             else if(event.getActionCommand().equals("Create thinman pod")) {
@@ -282,10 +298,9 @@ public class ControlWindow extends JFrame{
                 createFinalPod();
             }
             else if(event.getActionCommand().equals("Add zombie")){
-                Zombie zombie = new Zombie();
-                AlienWindow window = new AlienWindow(zombie);
+                AlienWindow window = new AlienWindow(new Zombie());
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                window.setSize(zombie.width, zombie.height+16);
+                window.setSize(zombieToken.width, zombieToken.height+75);
                 window.setVisible(true);
                 System.out.println("Created a zombie");
             }
