@@ -19,6 +19,8 @@ public class ControlWindow extends JFrame{
     private JButton chryssalid;
     private JButton sectopod;
     private JButton mutonElite;
+    private JButton floater;
+    private JButton heavy_floater;
     private JButton zombie;
 
 
@@ -40,6 +42,8 @@ public class ControlWindow extends JFrame{
         chryssalid = new JButton("Create chryssalid pod");
         sectopod = new JButton("Create sectopod pod");
         mutonElite = new JButton("Create muton elite pod");
+        floater = new JButton("Create floater pod");
+        heavy_floater = new JButton("Create heavy floater pod");
         zombie = new JButton("Add zombie");
 
         setLayout(flayout);
@@ -58,6 +62,8 @@ public class ControlWindow extends JFrame{
         chryssalid.addActionListener(handler);
         sectopod.addActionListener(handler);
         mutonElite.addActionListener(handler);
+        floater.addActionListener(handler);
+        heavy_floater.addActionListener(handler);
         randomPod.addActionListener(handler);
         zombie.addActionListener(handler);
 
@@ -74,6 +80,8 @@ public class ControlWindow extends JFrame{
         add(sectopod);
         add(mutonElite);
         add(uber_etheral);
+        add(floater);
+        add(heavy_floater);
         add(randomPod);
         add(zombie);
     }
@@ -92,6 +100,8 @@ public class ControlWindow extends JFrame{
         private final Chryssalid chryssalidToken = new Chryssalid();
         private final Sectopod sectopodToken = new Sectopod();
         private final MutonElite mutonEliteToken = new MutonElite();
+        private final Floater floaterToken= new Floater();
+        private final HeavyFloater heavyFloaterToken = new HeavyFloater();
         private final Zombie zombieToken = new Zombie();
         private final Drone droneToken = new Drone();
 
@@ -227,6 +237,24 @@ public class ControlWindow extends JFrame{
             }
             System.out.println("Created muton elite pod");
         }
+        private void createFloaters(){
+            for(int i = 0; i<2; i++){
+                AlienWindow window = new AlienWindow(new Floater());
+                window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                window.setSize(floaterToken.width,floaterToken.height+75);
+                window.setVisible(true);
+            }
+            System.out.println("Created floater pod");
+        }
+        private void createHeavyFloaters(){
+            for(int i = 0; i<2; i++){
+                AlienWindow window = new AlienWindow(new HeavyFloater());
+                window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                window.setSize(heavyFloaterToken.width,heavyFloaterToken.height+75);
+                window.setVisible(true);
+            }
+            System.out.println("Created heavy floaters pod");
+        }
         private void createFinalPod() {
             for (int i = 0; i < 2; i++) {
                 AlienWindow window = new AlienWindow(new Etheral());
@@ -293,6 +321,12 @@ public class ControlWindow extends JFrame{
             }
             else if(event.getActionCommand().equals("Create muton elite pod")) {
                 createMutonElites();
+            }
+            else if(event.getActionCommand().equals("Create floater pod")) {
+                createFloaters();
+            }
+            else if(event.getActionCommand().equals("Create heavy floater pod")) {
+                createHeavyFloaters();
             }
             else if(event.getActionCommand().equals("Create uber etheral pod")) {
                 createFinalPod();
