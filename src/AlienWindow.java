@@ -36,9 +36,9 @@ public class AlienWindow extends JFrame {
 
         setLayout(blayout);
 
-        add(alien, BorderLayout.NORTH);
+        add(alien, BorderLayout.CENTER);
         add(information, BorderLayout.SOUTH);
-        add(abilitiesText, BorderLayout.CENTER);
+        add(abilitiesText, BorderLayout.NORTH);
 
     }
     private class Handler implements ActionListener
