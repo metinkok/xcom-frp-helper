@@ -9,6 +9,10 @@ public class Alien{
     int mobility;
     int will;
 
+    int width;
+    int height;
+    int damage;
+
     public Alien(String name, String image_url, int hp, int aim, int critical_chance, int defence, int mobility, int will){
         this.name = name;
         this.image_url = image_url;

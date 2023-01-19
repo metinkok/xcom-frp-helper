@@ -82,7 +82,7 @@ public class AlienWindow extends JFrame {
                 if(xeno.hp > 0){
                     AlienWindow window = new AlienWindow(xeno);
                     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    window.setSize(375,400);
+                    window.setSize(xeno.width,xeno.height+75);
                     window.setVisible(true);
                 }
             }

@@ -6,7 +6,7 @@ public class Sectoid extends Alien{
     Sectoid() {
         super("Sectoid", "images\\Sectoid.png", 3, 65, 0, 0, 12, 10);
         super.abilities = abilities;
-        width = 350; //images dimension of width as pixels
-        height = 197; //images dimension of height as pixels
+        super.width = 350; //images dimension of width as pixels
+        super.height = 197; //images dimension of height as pixels
     }
 }

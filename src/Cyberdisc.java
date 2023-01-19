@@ -1,12 +1,10 @@
 public class Cyberdisc extends Alien{
     String[] abilities = {"Death blossom", "Bombard", "Airborne"};
-    int width;
-    int height;
 
     Cyberdisc() {
         super("Cyberdisc", "images\\Cyberdisc.png", 16, 70, 0, 10, 18, 0);
         super.abilities = abilities;
-        width = 350; //images dimension of width as pixels
-        height = 228; //images dimension of height as pixels
+        super.width = 350; //images dimension of width as pixels
+        super.height = 228; //images dimension of height as pixels
     }
 }
