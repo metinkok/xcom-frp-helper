@@ -7,6 +7,7 @@ public class AlienWindow extends JFrame {
     private JButton alien;
     private ImageIcon alien_icon;
     private JTextField information;
+    private JTextField abilitiesText;
     private BorderLayout blayout=new BorderLayout();
     private Alien xeno;
 
@@ -15,20 +16,30 @@ public class AlienWindow extends JFrame {
         Handler handler = new Handler();
         this.xeno = xeno;
         String abilities = "";
-
+        if(xeno.abilities.length > 0){
+            for(int i = 0; i<xeno.abilities.length; i++){
+                abilities = abilities+", "+xeno.abilities[i];
+            }
+        }
         java.net.URL imgURL = AlienWindow.class.getResource(xeno.image_url);
         alien_icon = new ImageIcon(imgURL);
         alien = new JButton(alien_icon);
         information = new JTextField();
+        abilitiesText = new JTextField();
 
         information.setText("HP:"+xeno.hp+" AIM:"+xeno.aim+" CRIT:"+xeno.critical_chance+" DEF:"+xeno.defence+" MOB:"+xeno.mobility+" WILL:"+xeno.will);
         information.setEditable(false);
+        abilitiesText.setText("Abilities:"+abilities);
+        abilitiesText.setEditable(false);
+
+        alien.addActionListener(handler);
 
         setLayout(blayout);
 
-        alien.addActionListener(handler);
         add(alien, BorderLayout.NORTH);
         add(information, BorderLayout.SOUTH);
+        add(abilitiesText, BorderLayout.CENTER);
+
     }
     private class Handler implements ActionListener
     {

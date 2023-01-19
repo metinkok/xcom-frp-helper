@@ -1,6 +1,7 @@
 public class Alien{
     String name;
     String image_url;
+    String [] abilities;
     int hp;
     int aim;
     int critical_chance;

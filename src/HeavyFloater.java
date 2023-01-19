@@ -5,6 +5,7 @@ public class HeavyFloater extends Alien{
 
     HeavyFloater() {
         super("Heavy Floater", "images\\Heavy_floater.png", 12, 70, 0, 10, 12, 25);
+        super.abilities = abilities;
         width = 350; //images dimension of width as pixels
         height = 311; //images dimension of height as pixels
     }

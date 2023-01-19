@@ -5,6 +5,7 @@ public class Etheral extends Alien{
 
     Etheral() {
         super("Etheral", "images\\Etheral.png", 20, 100, 0, 40, 12, 120);
+        super.abilities = abilities;
         width = 350; //images dimension of width as pixels
         height = 253; //images dimension of height as pixels
     }

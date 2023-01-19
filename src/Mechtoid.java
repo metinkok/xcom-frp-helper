@@ -5,6 +5,7 @@ public class Mechtoid extends Alien{
 
     Mechtoid() {
         super("Mechtoid", "images\\Mechtoid.png", 20, 70, 0, 10, 14, 0);
+        super.abilities = abilities;
         width = 350; //images dimension of width as pixels
         height = 188; //images dimension of height as pixels
     }
