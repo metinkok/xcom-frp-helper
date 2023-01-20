@@ -8,12 +8,12 @@ public class Alien{
     int defence;
     int mobility;
     int will;
+    String damage;
 
     int width;
     int height;
-    int damage;
 
-    public Alien(String name, String image_url, int hp, int aim, int critical_chance, int defence, int mobility, int will){
+    public Alien(String name, String image_url, int hp, int aim, int critical_chance, int defence, int mobility, int will, String damage){
         this.name = name;
         this.image_url = image_url;
         this.hp = hp;
@@ -22,5 +22,6 @@ public class Alien{
         this.defence = defence;
         this.mobility = mobility;
         this.will = will;
+        this.damage = damage;
     }
 }

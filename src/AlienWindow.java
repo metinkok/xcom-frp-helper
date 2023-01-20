@@ -16,11 +16,9 @@ public class AlienWindow extends JFrame {
         Handler handler = new Handler();
         this.xeno = xeno;
         String abilities = "";
-        if(xeno.abilities.length > 0){
-            for(int i = 0; i<xeno.abilities.length; i++){
-                abilities = abilities+", "+xeno.abilities[i];
-            }
-        }
+        for(int i = 0; i<xeno.abilities.length; i++)
+            abilities = abilities+", "+xeno.abilities[i];
+        abilities = abilities+", "+xeno.damage;
         java.net.URL imgURL = AlienWindow.class.getResource(xeno.image_url);
         alien_icon = new ImageIcon(imgURL);
         alien = new JButton(alien_icon);
