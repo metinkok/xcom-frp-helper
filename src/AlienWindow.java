@@ -15,8 +15,8 @@ public class AlienWindow extends JFrame {
         super(xeno.name);
         Handler handler = new Handler();
         this.xeno = xeno;
-        String abilities = "";
-        for(int i = 0; i<xeno.abilities.length; i++)
+        String abilities = xeno.abilities[0];
+        for(int i = 1; i<xeno.abilities.length; i++)
             abilities = abilities+", "+xeno.abilities[i];
         abilities = abilities+", "+xeno.damage;
         java.net.URL imgURL = AlienWindow.class.getResource(xeno.image_url);

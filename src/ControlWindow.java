@@ -285,6 +285,31 @@ public class ControlWindow extends JFrame{
                     createCyberdisk();
                 else if(pod == 5)
                     createThinmans();
+
+                else if(pod == 6) {
+                    createEtheral();
+                }
+                else if(pod == 7) {
+                    createSectopod();
+                }
+                else if(pod == 8) {
+                    createSeekers();
+                }
+                else if(pod == 9) {
+                    createMechtoid();
+                }
+                else if(pod == 10) {
+                    createChryssalids();
+                }
+                else if(pod == 11) {
+                    createMutonElites();
+                }
+                else if(pod == 12) {
+                    createFloaters();
+                }
+                else if(pod == 13) {
+                    createHeavyFloaters();
+                }
             }
             else if(event.getActionCommand().equals("Create sectoid pod")) {
                 createSectoids();
